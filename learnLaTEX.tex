@@ -1,0 +1,25 @@
+%导言区
+\documentclass{article}%book、report、letter、article
+\usepackage{ctex}%使用中文引入包可以使用将前面头一行修改为\documentclass{ctexart}代替
+%详情可见终端输入texdoc ctex查看
+%文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
+
+\newcommand\degree{^\circ}%使用newcommand命令来定义新的命令
+\title{\heiti 测试我的 vs code for \LaTeX}%设置标题
+\author{\kaishu 张三}%设置作者
+\date{\heiti \today}%设置日期 \today是今天
+%正文区
+\begin{document}
+% \maketitle%除了letter都是使用这个把标题作者时间引入到文章当中
+\maketitle
+测试中文
+哈哈哈哈
+你好啊
+test math $f(x)=x^2+3\degree$ %用单个或两个美元符号皆可使用数学模式区别是两个美元符号会另起一行来显示数学公式
+\begin{equation}
+    AB^2=BC^2+AC^2
+\end{equation}%用于产生带编号的行间公式
+\begin{equation}
+    \delta A=b*c
+\end{equation}
+\end{document}
