@@ -1,0 +1,35 @@
+%导言区
+\documentclass[12pt]{report}%book、report、letter、article
+%在文档区可使用可选参数设置normal大小只有10、11、12
+\usepackage{ctex}%使用中文引入包可以使用将前面头一行修改为\documentclass{ctexart}代替
+%详情可见终端输入texdoc ctex查看
+%文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
+\usepackage{amsmath}
+\title{\heiti 嵌入式作业\footnote{edit by \LaTeX}}
+\author{\kaishu 范李勇}
+\date{\today}
+
+%正文区
+\begin{document}
+\maketitle
+\section*{1、嵌入式系统中特殊功能寄存器有哪些？分别用于什么功能？} 
+\subsection*{（1）R13 ——> SP，为堆栈寄存器，用于C语言类程序之间调用所需的空间指针}
+\subsection*{（2）R14 ——> LR，为连接寄存器，在发生程序调用时，一般用户存放程序返回地址}
+\subsection*{（3）R15 ——> PC，为程序计数寄存器，存放西一条要执行的程序码地址}
+\section*{2、请写出0x21436587在大端和小端模式下的存储结构。}
+\subsection*{大端模式：内存地址从小到大的存储内容为0x21、0x43、0x65、0x87}
+\subsection*{小端模式：内存地址从小到大的存储内容为0x87、0x65、0x43、0x21}
+\section*{3、写出嵌入式中子函数调用的过程。}
+\subsection*
+{\heiti 使用IP(R12)暂时保存栈指针sp,
+然后使用堆栈操作指令stmfd将栈帧(FP)、IP、程序返回地址
+(LR)、程序计数器（PC）压栈，以保护现场，然后使用
+sub fp,ip,\#4使fp指向当前函数栈帧的栈底，
+sub sp,sp,\#8，为当前函数局部变量分配看空间。
+接下来通过寄存器传递参数r1,r2,r3,r4。
+使用BL指令调用函数，
+BL指令同时也会将当前指令的下一条指令地址赋给LR,
+以跳转回来。最后使用ldmfd恢复现场。}
+
+
+\end{document}

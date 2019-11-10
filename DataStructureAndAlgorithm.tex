@@ -1,0 +1,16 @@
+%导言区
+\documentclass[12pt]{book}%book、report、letter、article
+%在文档区可使用可选参数设置normal大小只有10、11、12
+\usepackage{ctex}%使用中文引入包可以使用将前面头一行修改为\documentclass{ctexart}代替
+%详情可见终端输入texdoc ctex查看
+%文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
+\usepackage{amsmath}
+\title{数据结构与算法笔记}
+\author{fly}
+\date{\today}
+%正文区
+\begin{document}
+
+\maketitle
+\include{chapter1}
+\end{document}

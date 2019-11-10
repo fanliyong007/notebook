@@ -1,9 +1,10 @@
 %导言区
-\documentclass{article}%book、report、letter、article
+\documentclass[12pt]{article}%book、report、letter、article
+%在文档区可使用可选参数设置normal大小只有10、11、12
 \usepackage{ctex}%使用中文引入包可以使用将前面头一行修改为\documentclass{ctexart}代替
 %详情可见终端输入texdoc ctex查看
 %文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
-
+\usepackage{amsmath}
 \newcommand\degree{^\circ}%使用newcommand命令来定义新的命令
 \title{\heiti 测试我的 vs code for \LaTeX}%设置标题
 \author{\kaishu 张三}%设置作者
@@ -22,4 +23,60 @@ test math $f(x)=x^2+3\degree$ %用单个或两个美元符号皆可使用数学�
 \begin{equation}
     \delta A=b*c
 \end{equation}
+%字体族设置（罗马、无衬线、打字机）
+
+\textrm{Roman Family}%设置字体族为罗马字体
+%\textsf{}为无衬线字体族\texttt为打字机字体族
+
+\textsf{Sans Serif Family}
+
+\texttt{Typewriter Family}
+
+{\rmfamily Roman Family 测试中文}
+%设置后面字体族为罗马字体
+%\sffamily为无衬线字体族\ttfamily为打字机字体族
+
+{\sffamily Sans Serif Family}用大括号分组可声明设置范围
+
+{\ttfamily Typewriter Family 用大括号分组可声明设置范围}
+%用大括号分组可声明设置范围
+
+%字体系列设置（粗细、宽度）
+\textmd{Medium Series} \textbf{Boldfacae Series}
+
+{\mdseries Medium Series} {\bfseries Boldfacae Series}
+
+%字体形状（直立、斜体、伪斜体、小型大写）
+\textup{Upright Shape} \textit{Italic Shape}
+\textsl{Slanted Shape} \textsc{Small Caps Shape}
+
+{\upshape Upright Shape} {\itshape Italic Shape}
+{\slshape Slanted Shape} {\scshape Small Caps Shape}
+
+%中文字体
+{\songti 宋体}
+\quad 
+{\heiti 黑体} 
+\quad 
+{\fangsong 仿宋}
+\quad 
+{\kaishu 楷书} 
+
+中文字体 \textbf{粗体} 与  \textit{斜体}
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+%字体大小
+{\tiny  Hello}\\
+{\scriptsize Hello}\\
+{\footnotesize Hello}\\
+{\small Hello}\\
+{\normalsize Hello}\\
+{\large Hello}\\
+{\Large Hello}\\
+{\LARGE Hello}\\
+{\huge Hello}\\
+{\Huge Hello}
+
+\[
+  \lim_{x \to 0}^\infty
+\]
 \end{document}
