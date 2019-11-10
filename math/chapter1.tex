@@ -1,0 +1,228 @@
+\chapter{行列式}
+\section{行列式的定义}
+\subsection{二阶行列式}
+定义一个
+$$
+\left|\begin{array}{cc} a_{11} & a_{12} \\
+a_{21} & a_{22} \end{array}\right|
+$$
+为二阶行列式，主对角线为$a_{11}$和$a_{22}$，副对角线为$a_{12}$和$a_{21}$。并规定
+$$
+\left|\begin{array}{cc} a_{11} & a_{12} \\
+a_{21} & a_{22} \end{array}\right|=a_{11}\times a_{22}-a_{12}\times a_{21}
+$$
+值相等的两个行列式称为这两个行列式相等。\\
+\subsection{n 阶行列式}
+称用$n^2$个元素$a_{ij}  (i,j =1,2,…,n)$ 组成的如下对象
+$$
+D=\left|
+\begin{array}{cccc} 
+    a_{11} & a_{12} & \cdots & a_{1n} \\ 
+    a_{21} & a_{22} & \cdots & a_{2n} \\ 
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & a_{nn} 
+\end{array}
+\right|=\det(a_{ij})=|a_{ij}|_{n}
+$$
+为一个n 阶行列式(determinant)。
+$$
+D=\left|
+\begin{array}{cccc} 
+    a_{11} & a_{12} & a_{13} & a_{14} \\
+    a_{21} & a_{22} & a_{23} & a_{24} \\
+    a_{31} & a_{32} & a_{33} & a_{34} \\
+    a_{41} & a_{42} & a_{43} & a_{44} 
+\end{array}\right|,
+M_{23}=\left|
+\begin{array}{ccc} 
+    a_{11} & a_{12} & a_{14} \\
+    a_{31} & a_{32} & a_{34} \\
+    a_{41} & a_{42} & a_{44} 
+\end{array}\right|,A_{23}=(-1)^{2+3}M_{23}=-M_{23}
+$$
+{\color{red}定义：}在$n$阶行列式$D$中，去掉元素$a_{ij}$所在的第$i$行和$j$列，剩下的$n-1$阶行列式被称为元素$a_{ij}$在$D$中的余子式，记作$M_{ij}$。
+称$A_{ij}=(-1)^{i+j}M_{ij}$为元素$a_{ij}$在$D$中的代数余子式。\\
+{\color{red}定义：}在$n$阶行列式$D=|a_{ij}|_{n}$等于它的任意一行（列）的所有元素与其他代数余子式的乘积之和，即
+$$
+D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}
+$$
+或
+$$
+D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A_{nj}
+$$
+其中$i,j$可以取$1,2,\cdots,n$中任一数值\\
+{\color{blue}推论：}若行列式某行（列）的元素全为零，则行列式的值为零。\\
+{\color{green}结论：下三角行列式}
+$$
+\left|\begin{array}{cccc} 
+    a_{11} & 0 & \cdots & 0 \\
+    a_{21} & a_{22} & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \cdots \\
+    a_{n1} & a_{n2} & \cdots & a_{nn} 
+\end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
+$$
+{\color{green}结论：上三角行列式}
+$$
+\left|\begin{array}{cccc} 
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    0 & a_{22} & \cdots & a_{2n} \\
+    \vdots & \vdots & \ddots & \cdots \\
+    0 & 0 & \cdots & a_{nn} 
+\end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
+$$
+{\color{green}结论：对角行列式}
+$$
+\left|\begin{array}{cccc} 
+    a_{11} & 0 & \cdots & 0 \\
+    0 & a_{22} & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \cdots \\
+    0 & 0 & \cdots & a_{nn}
+\end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
+$$
+\section{行列式的性质}
+\subsection{行列式的性质}
+{\color{red}定义：}称将行列式$D$中的行列互换所得的新的行列式为$D$的转置，记作$D^{T}$\\
+例
+$$
+D=\left|
+\begin{array}{ccc}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9
+\end{array}
+\right|,
+D^{T}=\left|
+\begin{array}{ccc}
+    1 & 4 & 7 \\
+    2 & 5 & 8 \\
+    3 & 6 & 9
+\end{array}
+\right|
+$$
+即$D^{T}$亦可以视为由$D$以主对角线为轴旋转$180^{\circ}$而得\\
+{\color{green}结论：}二阶行列式与它的转置相等。由二阶行列式与它的转置相等可以推出三阶行列式也与它的转置相等 \\
+{\color{blue}性质1：}行列式与它的转置相等，即$D=D^{T}$\\
+{\color{red}注：}性质1说明行列式中行与列的地位是对等的。因此，凡是对行成立的性质也对列成立\\
+{\color{blue}性质2：}交换行列式的两行（列），行列式的值变号(展开后可以用数学归纳法证得)。\\
+$$
+D=
+\left|
+\begin{array}{ccc}
+    a & b & c \\
+    u & v & w \\
+    x & y & z
+\end{array}\right|
+\xlongequal{r_{2}\leftrightarrow r_{3}}
+-\left|
+\begin{array}{ccc}
+    a & b & c \\
+    x & y & z \\
+    u & v & w
+\end{array}\right|=D_{1}
+$$
+{\color{blue}推论：}如果行列式有两行（列）完全相同，则此行列式等于零 \\
+{\color{blue}性质3：}如果行列式的某一行(列)中所有元素有公因子, 则公因子可以提到行列式符号的外面, 即
+$$
+\left|
+\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    ka_{i1} & ka_{i2} & \cdots & ka_{in} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & a_{nn} 
+\end{array}\right|=
+k\left|
+\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{i1} & a_{i2} & \cdots & a_{in} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & a_{nn} 
+\end{array}\right|
+$$
+{\color{blue}推论：}如果行列式有两行(列)的对应元素成比例, 则行列式的值等于零。\\
+{\color{blue}性质4：}若行列式的某一列(行)的元素都是两数之和\\
+即，如果
+$$
+D=\left|
+\begin{array}{cccccc}
+    a_{11} & a_{12} & \cdots & {\color{red} a_{1j}}+{\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
+    a_{21} & a_{22} & \cdots & {\color{red} a_{2j}}+{\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
+    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}}+{\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
+\end{array}\right|
+$$
+则$D$等于下列两个行列式之和
+$$
+\left|
+\begin{array}{cccccc}
+    a_{11} & a_{12} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n}\\
+    a_{21} & a_{22} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n}\\
+    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn}\\
+\end{array}\right|
++\left|
+\begin{array}{cccccc}
+    a_{11} & a_{12} & \cdots & {\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
+    a_{21} & a_{22} & \cdots & {\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
+    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \cdots & {\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
+\end{array}\right|
+$$
+{\color{red}注：}一次只能拆{\color{red}一行}或{\color{red}一列} \\
+{\color{blue}性质5：}把行列式的某一列(行)的各元素乘以同一数k后加到另一列(行)对应的元素上去, 行列式的值不变。\\
+$$
+\left|
+\begin{array}{ccccccc}
+    a_{11} & \cdots & {\color{blue} a_{1i}} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n} \\
+    a_{21} & \cdots & {\color{blue} a_{2i}} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n} \\
+    \vdots & \cdots & \vdots & \ddots & \vdots                & \ddots & \ddots \\
+    a_{n1} & \cdots & {\color{blue} a_{ni}} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn} \\
+\end{array}\right|
+\xlongequal{c_{i}+kc_{j}}
+\left|
+\begin{array}{ccccccc}
+    a_{11} & \cdots & ({\color{blue} a_{1i}}+{\color{red} ka_{1j}}) & \cdots & a_{1j} & \cdots & a_{1n} \\
+    a_{21} & \cdots & ({\color{blue} a_{2i}}+{\color{red} ka_{2j}}) & \cdots & a_{2j} & \cdots & a_{2n} \\
+    \vdots & \cdots & \vdots                                     & \ddots & \vdots & \ddots & \ddots \\
+    a_{n1} & \cdots & ({\color{blue} a_{ni}}+{\color{red} ka_{nj}}) & \cdots & a_{nj} & \cdots & a_{nn} \\
+\end{array}\right|
+$$
+\subsection{行列式的计算}
+
+{\color{blue}行列式的计算方法1：} 利用性质将行列式化为三角行列式(特殊行列式)。\\
+{\color{red}注：}这种方法是计算机程序计算行列式的一种常用的方法。利用该方法计算$n$阶行列式大约需要$\frac{2n^{3}}{3}$次运算，在不到一秒钟内就可以计算一个25阶的行列式\\
+{\color{blue}计算行列式的方法2(主要方法)：}利用性质和展开公式。 \\
+{\color{blue}基本思路：}
+\begin{enumerate}
+    \item{选择一列(行), 利用性质5将该列(行)化出较多的零。}
+    \item{利用展开定理将行列式按该列(行)展开。}
+    \item{重复以上两步操作。}
+\end{enumerate}
+{\color{blue}技巧1：}选择数字简单的一行(列)\\
+{\color{blue}技巧2：}如果某行(列)只有1或2个元素$\neq 0$, 可按该行(列)直接展开。\\
+{\color{blue}技巧3：}如果每行和列都只有2个元素不等于0, 一般按第1行(列)或最后一行(列)直接展开。\\
+{\color{blue}技巧4：}行和行列式的计算
+$$
+D=\left|
+\begin{array}{cccc}
+    1   & -1  & 1   & x-1 \\
+    1   & -1  & x+1 & -1  \\    
+    1   & x-1 & 1   & -1  \\    
+    x+1 & -1  & 1   & -1  \\
+\end{array}\right|
+=x\times (-1)^{1+1} \times \left|
+\begin{array}{ccc}
+    {\color{yellow} 0} & x & -x \\
+    {\color{yellow} x} & 0 & -x \\    
+    {\color{yellow} 0} & 0 & -x \\
+\end{array}\right|=x\times x \times (-1)^{2+1}\times\left|
+\begin{array}{cc}
+    x & -x \\
+    0 & -x \\    
+\end{array}\right|=x^{4}
+$$
+
+
+
+

@@ -1,12 +1,17 @@
 #  Ignore everything
-*
+
+*.bib
+*.md
+*.aux
+*.log
+*.gz
+*.toc
+*.json
+test.tex
 
 # Except tex files
-
-!.gitignore
 !*.tex
-!*.bib
-!*.md
-# ... even if they are in subdirectories
+!.gitignore
 
+# ... even if they are in subdirectories
 !*/
