@@ -1,5 +1,95 @@
 \chapter{矩阵}
 \section{矩阵}
 \subsection{矩阵的概念}
+{\color{red}定义：}有$m\times n$个数$a_{ij}(i=1,2,\cdots,m;j=1,2,\cdots,n)$排成的一个$m$行$n$列矩形数表，称为
+一个${\color{blue}m\times n}$矩阵，记作
+$$
+A_{m\times n}=A=
+\left[ \begin{matrix}
+    {{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1n}}  \\
+    {{a}_{21}} & {{a}_{22}} & \cdots  & {{a}_{2n}}  \\
+    \vdots  & \vdots  & {\ddots} & \vdots   \\
+    {{a}_{m1}} & {{a}_{m2}} & \cdots  & {{a}_{mn}}  \\
+ \end{matrix} \right] 
+=(a_{ij})_{m\times n}
+$$
+称$a_{ij}$为这个矩阵的第$i$行第$j$列的元素,称$m{\color{red}\times} n$(即：行数$\times$列数)为该{\color{blue}矩阵的型}\\
 \subsection{矩阵的相等}
+\begin{enumerate}
+    \item{如果两个矩阵的型相同, 称为同型矩阵。}
+    \item{
+        两个矩阵$A=(a_{ij})$与$B=(b_{ij})$为同型矩阵, 且对应元素均相等，即
+        $$
+        a_{ij}=b_{ij}(i=1,2,\cdots,m;j=1,2,\cdots,n)
+        $$
+        则称矩阵A和B相等，记作A=B
+        }
+\end{enumerate}
 \subsection{特殊矩阵}
+\begin{enumerate}
+    \item{行矩阵(或行向量)：只有一行的矩阵称为行矩阵(或行向量)。\\
+    $$A=\left[\begin{matrix}
+        a_1\quad a_2\quad\cdots\quad a_n
+    \end{matrix}
+    \right]
+    =(a_1,a_2,\cdots,a_n)$$
+    }
+    \item{列矩阵(或列向量)：只有一列的矩阵称为列矩阵(或列向量)
+        $$B=\left[\begin{matrix}
+            b_1 \\ b_2 \\ \vdots \\ b_n
+        \end{matrix}
+            \right]
+        $$
+    }
+    \item{
+        方阵：如果矩阵$A=(a_{ij})$的行数与列数都等于$n$, 则称$A$为$n$阶矩阵(或称$n$阶方阵)。
+        $$
+        A=\left[\begin{matrix}
+            {{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1n}}  \\
+            {{a}_{21}} & {{a}_{22}} & \cdots  & {{a}_{2n}}  \\
+            \vdots  & \vdots  & {\ddots} & \vdots   \\
+            {{a}_{n1}} & {{a}_{n2}} & \cdots  & {{a}_{nn}}  \\
+         \end{matrix} \right]         
+        $$
+        {\color{red}注\quad}矩阵与行列式有本质区别：\\
+        行列式是表示一个数值, 而矩阵仅表示数表本身。矩阵的行数和列数可以不同,符号不同。
+    }
+    \item{
+        零矩阵：元素全为零的矩阵称为零矩阵。$m\times n$零矩阵记作$0_{m\times n}$或$0$。\\
+        {\color{red}注\quad}不同型的零矩阵是不相等的
+        $$
+        \left[\begin{matrix}
+            0 & 0 & 0 & 0  \\
+            0 & 0 & 0 & 0  \\
+            0 & 0 & 0 & 0  \\
+            0 & 0 & 0 & 0  \\
+         \end{matrix} \right]\ne 
+         \left[ \begin{matrix}
+            0 & 0 & 0 & 0  \\
+         \end{matrix} \right]         
+        $$
+    }
+    \item{
+        上三角形矩阵和下三角形矩阵：称形如
+        $$
+        \left[ \begin{matrix}
+            {{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1n}}  \\
+            0 & {{a}_{22}} & \cdots  & {{a}_{2n}}  \\
+            \vdots  & \vdots  & {\ddots} & \vdots   \\
+            0 & 0 & \cdots  & {{a}_{nn}}  \\
+         \end{matrix} \right]         
+        $$
+        的矩阵为上三角矩阵。\\
+        {\color{blue}性质\quad}如果矩阵$A={a_{ij}}$是上三角矩阵，则当$i>j$时，必有$a_{ij}=0$。
+        类似的，称形如
+         $$
+         \left[ \begin{matrix}
+            {{a}_{11}} & 0 & 0 & 0  \\
+            {{a}_{21}} & {{a}_{22}} & \cdots  & 0  \\
+            \vdots  & \vdots  & {\ddots} & \vdots   \\
+            {{a}_{n1}} & {{a}_{n2}} & \cdots  & {{a}_{nn}}  \\
+         \end{matrix} \right]         
+         $$
+        的矩阵为下三角矩阵。
+    }
+\end{enumerate}
