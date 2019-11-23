@@ -1,57 +1,26 @@
 %导言区
-\documentclass[12pt]{book}%book、report、letter、article
+\documentclass{report}%book、report、letter、article
 %在文档区可使用可选参数设置normal大小只有10、11、12
 \usepackage{ctex}%使用中文引入包可以使用将前面头一行修改为\documentclass{ctexart}代替
 %详情可见终端输入texdoc ctex查看
 %文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
 \usepackage{amsmath}
-\title{\heiti 线性代数笔记\footnote{edit by \LaTeX}}
-\author{\kaishu 范李勇}
-\date{\today}
 
 %正文区
 \begin{document}
-\maketitle
-\chapter{行列式}
-\section{ 1、二阶行列式}
-定义一个
-$$
-\left|\begin{array}{cc} a_{11} & a_{12} \\
-a_{21} & a_{22} \end{array}\right|
-$$
-为二阶行列式，主对角线为$a_{11}$和$a_{22}$，副对角线为$a_{12}$和$a_{21}$。并规定
-$$
-\left|\begin{array}{cc} a_{11} & a_{12} \\
-a_{21} & a_{22} \end{array}\right|=a_{11}\times a_{22}-a_{12}\times a_{21}
-$$
-值相等的两个行列式称为这两个行列式相等。\\
-称用$n^2$个元素$a_{ij}  (i,j =1,2,…,n)$ 组成的如下对象
-$$
-D=\left|
-\begin{array}{cccc} 
-    a_{11} & a_{12} & \cdots & a_{1n} \\ 
-    a_{21} & a_{22} & \cdots & a_{2n} \\ 
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & a_{nn} 
-\end{array}
-\right|=\det(a_{ij})=|a_{ij}|_{n}
-$$
-为一个n 阶行列式(determinant)。
-$$
-D=\left|
-\begin{array}{cccc} 
-    a_{11} & a_{12} & a_{13} & a_{14} \\
-    a_{21} & a_{22} & a_{23} & a_{24} \\
-    a_{31} & a_{32} & a_{33} & a_{34} \\
-    a_{41} & a_{42} & a_{43} & a_{44} 
-\end{array}\right|,
-M_{23}=\left|
-\begin{array}{ccc} 
-    a_{11} & a_{12} & a_{14} \\
-    a_{31} & a_{32} & a_{34} \\
-    a_{41} & a_{42} & a_{44} 
-\end{array}\right|,A_{23}=(-1)^{2+3}M_{23}=-M_{23}
-$$
-定义：在$n$阶行列式$D$中，去掉元素$a_{ij}$所在的第$i$行和$j$列，剩下的$n-1$阶行列式被称为元素$a_{ij}$在$D$中的余子式，记作$M_{ij}$。
-称$A_{ij}=(-1)^{i+j}M_{ij}$为元素$a_{ij}$在$D$中的代数余子式。
+\title{计算机网络第三章课后习题}
+\author{\kaishu 范李勇}
+\date{\today}
+\begin{tabular}{cc}
+    $\quad \quad \quad \quad \ 110000101$\\     
+    $10011\overline{)11010110110000}$\\
+    $\overline{10011}$\\
+    $10011$\\
+    $\quad \quad \quad \quad \overline{10110}$\\
+    $\quad \quad \quad \quad 10011$\\
+    $\quad \quad \quad \quad \quad \quad \overline{10100}$\\
+    $\quad \quad \quad \quad \quad \quad 10011$\\
+    $\quad \quad \quad \quad \quad \quad \quad \quad \overline{1110}$
+\end{tabular}
+% \longdiv{11010110110000}{10011}
 \end{document}

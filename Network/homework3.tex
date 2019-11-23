@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}{
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{第三章}
+\newcommand{\hmwkDueDate}{\today}
+\newcommand{\hmwkClass}{计算机网络}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{}
+\newcommand{\hmwkAuthorName}{范李勇}
+
+% \title{计算机网络第三章课后习题}
+% \author{\kaishu 范李勇}
+% \date{\today}
+
+
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+\author{\textbf{\hmwkAuthorName}}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+    {\Large \textbf{3-02 数据链路层中的链路控制包括哪些功能？试讨论数据链路层做成可靠的链路层有哪些优点和缺点}}\\
+    \begin{itemize}
+        \item{(1)	链路管理}
+        \item{(2) 帧定界 }
+        \item{(3) 流量控制 }
+        \item{(4) 差错控制 }
+        \item{(5) 将数据和控制信息区分开 }
+        \item{(6) 透明传输 }
+        \item{(7) 寻址}
+    \end{itemize}
+    可靠的链路层的优点和缺点取决于所应用的环境:对于干扰严重的信道，可靠的链路层可以将重传范围约束在局部链路,，防止全网络的传输效率受损，对于优质信道，采用可靠的链路层会增大资源开销，影响传输效率。
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    {\Large \textbf{3-03网络适配器的作用是什么？网络适配器工作在哪一层？}}\\
+    适配器来实现数据链路层和物理层这两层的协议的硬件和软件
+网络适配器工作在TCP/IP协议中的网络接口层
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    {\Large \textbf{3-07要发送的数据为1101011011。采用CRC的生成多项式是$P(X)=X^4+X+1$。试求应添加在数据后面的余数。数据在传输过程中最后一个1变成了0，问接收端能否发现？}}\\
+    \begin{tabular}{cc}
+        $\quad \quad \quad \quad \ 110000101$\\     
+        $10011\overline{)11010110110000}$\\
+        $\overline{10011}$\\
+        $10011$\\
+        $\quad \quad \quad \quad \overline{10110}$\\
+        $\quad \quad \quad \quad 10011$\\
+        $\quad \quad \quad \quad \quad \quad \overline{10100}$\\
+        $\quad \quad \quad \quad \quad \quad 10011$\\
+        $\quad \quad \quad \quad \quad \quad \quad \quad \overline{1110}$
+    \end{tabular}
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    {\Large \textbf{3-20假定1km长的CSMA/CD网络的数据为1Gbit/s。设信号在网络上的传播速率为200000km/s。求能够使用此协议的最短帧长。}}\\
+    对于1km电缆，单程传播时间为1/200000=5微秒，来回路程传播时间为10微秒，为了能够按照CSMA/CD工作，最小帧的发射时间不能小于10微秒。
+$$\frac{10\times 10^{-6}}{1\times 10^{-9}}=10000$$
+    所以最短帧是10000位或1250字节长。
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    {\Large \textbf{3-28 10Mbit/s以太网升级到100Mbit/s、1Gbit/s和10Gbit/s时，都需要解决哪些技术问题？为什么以太网能够在发展过程中淘汰掉自己的竞争对手，并使自己的应用范围从局域网一直扩展到城域网和广域网？}}\\
+    以太网升级时，由于数据传输率提高了，帧的发送时间会按比例缩短，这样会影响冲突的检测。所以需要减小最大电缆长度或增大帧的最小长度，使参数a保持为较小的值，才能有效地检测冲突。以太网是一种经过实践证明成熟的技术，价格便宜，易于安装、使用，提供不同的传输组率，可满足不同的需求。
+\end{homeworkProblem}
+\begin{homeworkProblem}
+    {\Large \textbf{3-32假定在图3-30中的所有链路的速率仍为100Mbit/s，但所有的以太网交换机都换成为100Mbit/s的集线器。试计算这9台主机和两个服务器产生的总的吞吐量的最大值。为什么？}}\\
+    现在整个系统是一个碰撞域，因此其最大吞吐量为100 Mbit/s。
+\end{homeworkProblem}
+\end{document}
