@@ -17,10 +17,10 @@ $$
 $$
 D=\left|
 \begin{array}{cccc} 
-    a_{11} & a_{12} & \cdots & a_{1n} \\ 
-    a_{21} & a_{22} & \cdots & a_{2n} \\ 
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & a_{nn} 
+a_{11} & a_{12} & \cdots & a_{1n} \\ 
+a_{21} & a_{22} & \cdots & a_{2n} \\ 
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}
 \right|=\det(a_{ij})=|a_{ij}|_{n}
 $$
@@ -28,16 +28,16 @@ $$
 $$
 D=\left|
 \begin{array}{cccc} 
-    a_{11} & a_{12} & a_{13} & a_{14} \\
-    a_{21} & a_{22} & a_{23} & a_{24} \\
-    a_{31} & a_{32} & a_{33} & a_{34} \\
-    a_{41} & a_{42} & a_{43} & a_{44} 
+a_{11} & a_{12} & a_{13} & a_{14} \\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+a_{41} & a_{42} & a_{43} & a_{44} 
 \end{array}\right|,
 M_{23}=\left|
 \begin{array}{ccc} 
-    a_{11} & a_{12} & a_{14} \\
-    a_{31} & a_{32} & a_{34} \\
-    a_{41} & a_{42} & a_{44} 
+a_{11} & a_{12} & a_{14} \\
+a_{31} & a_{32} & a_{34} \\
+a_{41} & a_{42} & a_{44} 
 \end{array}\right|,A_{23}=(-1)^{2+3}M_{23}=-M_{23}
 $$
 {\color{red}定义：}在$n$阶行列式$D$中，去掉元素$a_{ij}$所在的第$i$行和$j$列，剩下的$n-1$阶行列式被称为元素$a_{ij}$在$D$中的余子式，记作$M_{ij}$。
@@ -55,28 +55,28 @@ $$
 {\color{green}结论：下三角行列式}
 $$
 \left|\begin{array}{cccc} 
-    a_{11} & 0 & \cdots & 0 \\
-    a_{21} & a_{22} & \cdots & 0 \\
-    \vdots & \vdots & \ddots & \cdots \\
-    a_{n1} & a_{n2} & \cdots & a_{nn} 
+a_{11} & 0 & \cdots & 0 \\
+a_{21} & a_{22} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \cdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
 $$
 {\color{green}结论：上三角行列式}
 $$
 \left|\begin{array}{cccc} 
-    a_{11} & a_{12} & \cdots & a_{1n} \\
-    0 & a_{22} & \cdots & a_{2n} \\
-    \vdots & \vdots & \ddots & \cdots \\
-    0 & 0 & \cdots & a_{nn} 
+a_{11} & a_{12} & \cdots & a_{1n} \\
+0 & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \cdots \\
+0 & 0 & \cdots & a_{nn} 
 \end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
 $$
 {\color{green}结论：对角行列式}
 $$
 \left|\begin{array}{cccc} 
-    a_{11} & 0 & \cdots & 0 \\
-    0 & a_{22} & \cdots & 0 \\
-    \vdots & \vdots & \ddots & \cdots \\
-    0 & 0 & \cdots & a_{nn}
+a_{11} & 0 & \cdots & 0 \\
+0 & a_{22} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \cdots \\
+0 & 0 & \cdots & a_{nn}
 \end{array}\right|=a_{11}a_{22}\cdots a_{nn}.
 $$
 \section{行列式的性质}
@@ -86,16 +86,16 @@ $$
 $$
 D=\left|
 \begin{array}{ccc}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
 \end{array}
 \right|,
 D^{T}=\left|
 \begin{array}{ccc}
-    1 & 4 & 7 \\
-    2 & 5 & 8 \\
-    3 & 6 & 9
+1 & 4 & 7 \\
+2 & 5 & 8 \\
+3 & 6 & 9
 \end{array}
 \right|
 $$
@@ -108,16 +108,16 @@ $$
 D=
 \left|
 \begin{array}{ccc}
-    a & b & c \\
-    u & v & w \\
-    x & y & z
+a & b & c \\
+u & v & w \\
+x & y & z
 \end{array}\right|
 \xlongequal{r_{2}\leftrightarrow r_{3}}
 -\left|
 \begin{array}{ccc}
-    a & b & c \\
-    x & y & z \\
-    u & v & w
+a & b & c \\
+x & y & z \\
+u & v & w
 \end{array}\right|=D_{1}
 $$
 {\color{blue}推论：}如果行列式有两行（列）完全相同，则此行列式等于零 \\
@@ -125,19 +125,19 @@ $$
 $$
 \left|
 \begin{array}{cccc}
-    a_{11} & a_{12} & \cdots & a_{1n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    ka_{i1} & ka_{i2} & \cdots & ka_{in} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & a_{nn} 
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & \ddots & \vdots \\
+ka_{i1} & ka_{i2} & \cdots & ka_{in} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}\right|=
 k\left|
 \begin{array}{cccc}
-    a_{11} & a_{12} & \cdots & a_{1n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{i1} & a_{i2} & \cdots & a_{in} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & a_{nn} 
+a_{11} & a_{12} & \cdots & a_{1n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{i1} & a_{i2} & \cdots & a_{in} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}\right|
 $$
 {\color{blue}推论：}如果行列式有两行(列)的对应元素成比例, 则行列式的值等于零。\\
@@ -146,27 +146,27 @@ $$
 $$
 D=\left|
 \begin{array}{cccccc}
-    a_{11} & a_{12} & \cdots & {\color{red} a_{1j}}+{\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
-    a_{21} & a_{22} & \cdots & {\color{red} a_{2j}}+{\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
-    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}}+{\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
+a_{11} & a_{12} & \cdots & {\color{red} a_{1j}}+{\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & {\color{red} a_{2j}}+{\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}}+{\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
 \end{array}\right|
 $$
 则$D$等于下列两个行列式之和
 $$
 \left|
 \begin{array}{cccccc}
-    a_{11} & a_{12} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n}\\
-    a_{21} & a_{22} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n}\\
-    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn}\\
+a_{11} & a_{12} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn}\\
 \end{array}\right|
 +\left|
 \begin{array}{cccccc}
-    a_{11} & a_{12} & \cdots & {\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
-    a_{21} & a_{22} & \cdots & {\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
-    \vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
-    a_{n1} & a_{n2} & \cdots & {\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
+a_{11} & a_{12} & \cdots & {\color{blue} a^{'}_{1j}} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & {\color{blue} a^{'}_{2j}} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots            & \ddots & \vdots \\
+a_{n1} & a_{n2} & \cdots & {\color{blue} a^{'}_{nj}} & \cdots & a_{nn}\\
 \end{array}\right|
 $$
 {\color{red}注：}一次只能拆{\color{red}一行}或{\color{red}一列} \\
@@ -174,18 +174,18 @@ $$
 $$
 \left|
 \begin{array}{ccccccc}
-    a_{11} & \cdots & {\color{blue} a_{1i}} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n} \\
-    a_{21} & \cdots & {\color{blue} a_{2i}} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n} \\
-    \vdots & \cdots & \vdots & \ddots & \vdots                & \ddots & \ddots \\
-    a_{n1} & \cdots & {\color{blue} a_{ni}} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn} \\
+a_{11} & \cdots & {\color{blue} a_{1i}} & \cdots & {\color{red} a_{1j}} & \cdots & a_{1n} \\
+a_{21} & \cdots & {\color{blue} a_{2i}} & \cdots & {\color{red} a_{2j}} & \cdots & a_{2n} \\
+\vdots & \cdots & \vdots & \ddots & \vdots                & \ddots & \ddots \\
+a_{n1} & \cdots & {\color{blue} a_{ni}} & \cdots & {\color{red} a_{nj}} & \cdots & a_{nn} \\
 \end{array}\right|
 \xlongequal{c_{i}+kc_{j}}
 \left|
 \begin{array}{ccccccc}
-    a_{11} & \cdots & ({\color{blue} a_{1i}}+{\color{red} ka_{1j}}) & \cdots & a_{1j} & \cdots & a_{1n} \\
-    a_{21} & \cdots & ({\color{blue} a_{2i}}+{\color{red} ka_{2j}}) & \cdots & a_{2j} & \cdots & a_{2n} \\
-    \vdots & \cdots & \vdots                                     & \ddots & \vdots & \ddots & \ddots \\
-    a_{n1} & \cdots & ({\color{blue} a_{ni}}+{\color{red} ka_{nj}}) & \cdots & a_{nj} & \cdots & a_{nn} \\
+a_{11} & \cdots & ({\color{blue} a_{1i}}+{\color{red} ka_{1j}}) & \cdots & a_{1j} & \cdots & a_{1n} \\
+a_{21} & \cdots & ({\color{blue} a_{2i}}+{\color{red} ka_{2j}}) & \cdots & a_{2j} & \cdots & a_{2n} \\
+\vdots & \cdots & \vdots                                     & \ddots & \vdots & \ddots & \ddots \\
+a_{n1} & \cdots & ({\color{blue} a_{ni}}+{\color{red} ka_{nj}}) & \cdots & a_{nj} & \cdots & a_{nn} \\
 \end{array}\right|
 $$
 \subsection{行列式的计算}
@@ -195,9 +195,9 @@ $$
 {\color{blue}计算行列式的方法2(主要方法)：}利用性质和展开公式。 \\
 {\color{blue}基本思路：}
 \begin{enumerate}
-    \item{选择一列(行), 利用性质5将该列(行)化出较多的零。}
-    \item{利用展开定理将行列式按该列(行)展开。}
-    \item{重复以上两步操作。}
+\item{选择一列(行), 利用性质5将该列(行)化出较多的零。}
+\item{利用展开定理将行列式按该列(行)展开。}
+\item{重复以上两步操作。}
 \end{enumerate}
 {\color{blue}技巧1：}选择数字简单的一行(列)\\
 {\color{blue}技巧2：}如果某行(列)只有1或2个元素$\neq 0$, 可按该行(列)直接展开。\\
@@ -206,22 +206,22 @@ $$
 $$
 D=\left|
 \begin{array}{cccc}
-    1   & -1  & 1   & x-1 \\
-    1   & -1  & x+1 & -1  \\    
-    1   & x-1 & 1   & -1  \\    
-    x+1 & -1  & 1   & -1  \\
+1   & -1  & 1   & x-1 \\
+1   & -1  & x+1 & -1  \\    
+1   & x-1 & 1   & -1  \\    
+x+1 & -1  & 1   & -1  \\
 \end{array}\right|
 \underset{{{c}_{1}}+{{c}_{4}}}{\overset{
-    \begin{smallmatrix} 
-    {{c}_{1}}+{{c}_{2}} \\ 
-    {{c}_{1}}+{{c}_{3}} 
-   \end{smallmatrix}}{\mathop{===}}}\left| 
-   \begin{matrix}
-      x & -1 & 1 & x-1  \\
-      x & -1 & x+1 & -1  \\
-      x & x-1 & 1 & -1  \\
-      x & -1 & 1 & -1  \\
-   \end{matrix} \right|
+\begin{smallmatrix} 
+{{c}_{1}}+{{c}_{2}} \\ 
+{{c}_{1}}+{{c}_{3}} 
+\end{smallmatrix}}{\mathop{===}}}\left| 
+\begin{matrix}
+    x & -1 & 1 & x-1  \\
+    x & -1 & x+1 & -1  \\
+    x & x-1 & 1 & -1  \\
+    x & -1 & 1 & -1  \\
+\end{matrix} \right|
 \underset{{{r}_{4}}-{{r}_{1}}}{\overset{
 \begin{smallmatrix} 
 {{r}_{2}}-{{r}_{1}} \\ 
@@ -229,113 +229,113 @@ D=\left|
 \end{smallmatrix}}{\mathop{===}}}
 \left| 
 \begin{matrix}
-    x & -1 & 1 & x-1  \\
-    0 & 0 & x & -x  \\
-    0 & x & 0 & -x  \\
-    0 & 0 & 0 & -x  \\
+x & -1 & 1 & x-1  \\
+0 & 0 & x & -x  \\
+0 & x & 0 & -x  \\
+0 & 0 & 0 & -x  \\
 \end{matrix} \right|
 $$$$
 =x\times (-1)^{1+1} \times \left|
 \begin{array}{ccc}
-    {\color{yellow} 0} & x & -x \\
-    {\color{yellow} x} & 0 & -x \\    
-    {\color{yellow} 0} & 0 & -x \\
+{\color{yellow} 0} & x & -x \\
+{\color{yellow} x} & 0 & -x \\    
+{\color{yellow} 0} & 0 & -x \\
 \end{array}\right|=x\times x \times (-1)^{2+1}\times\left|
 \begin{array}{cc}
-    x & -x \\
-    0 & -x \\    
+x & -x \\
+0 & -x \\    
 \end{array}\right|=x^{4}
 $$
 {\color{blue} 例：}
 $$
 D=\left| \begin{matrix}
-    a & b & b & \cdots  & b  \\
-    b & a & b & \cdots  & b  \\
-    b & b & a & \cdots  & b  \\
-    \vdots  & \vdots  & \vdots  & \ddots & \vdots   \\
-    b & b & b & \cdots  & a  \\
- \end{matrix} \right|
- \underset{\begin{smallmatrix} 
-    \cdots  \\ 
-    {{c}_{1}}+{{c}_{n}} 
-   \end{smallmatrix}}{\overset{\begin{smallmatrix} 
-    {{c}_{1}}+{{c}_{2}} \\ 
-    {{c}_{1}}+{{c}_{3}} 
-   \end{smallmatrix}}{\mathop{===}}}  
+a & b & b & \cdots  & b  \\
+b & a & b & \cdots  & b  \\
+b & b & a & \cdots  & b  \\
+\vdots  & \vdots  & \vdots  & \ddots & \vdots   \\
+b & b & b & \cdots  & a  \\
+\end{matrix} \right|
+\underset{\begin{smallmatrix} 
+\cdots  \\ 
+{{c}_{1}}+{{c}_{n}} 
+\end{smallmatrix}}{\overset{\begin{smallmatrix} 
+{{c}_{1}}+{{c}_{2}} \\ 
+{{c}_{1}}+{{c}_{3}} 
+\end{smallmatrix}}{\mathop{===}}}  
 \left| \begin{matrix}
-    a+(n-1)b & b & b    & \cdots  & b  \\
-    a+(n-1)b & a & b    & \cdots  & b  \\
-    a+(n-1)b & b & a    & \cdots  & b  \\
-    \vdots   & \vdots   & \vdots  & \ddots & \vdots   \\
-    a+(n-1)b & b & b    & \cdots  & a  \\
+a+(n-1)b & b & b    & \cdots  & b  \\
+a+(n-1)b & a & b    & \cdots  & b  \\
+a+(n-1)b & b & a    & \cdots  & b  \\
+\vdots   & \vdots   & \vdots  & \ddots & \vdots   \\
+a+(n-1)b & b & b    & \cdots  & a  \\
 \end{matrix} \right| 
 $$$$
 D=\underset{\begin{smallmatrix} 
-    \cdots  \\ 
-    {{r}_{n}}-{{r}_{1}} 
-   \end{smallmatrix}}{\overset{\begin{smallmatrix} 
-    {{r}_{2}}-{{r}_{1}} \\ 
-    {{r}_{3}}-{{r}_{1}} 
-   \end{smallmatrix}}{\mathop{===}}}\,\ \left| \begin{matrix}
-      a+(n-1)b & b & b & \cdots  & b  \\
-      0 & a-b & 0 & \cdots  & 0  \\
-      0 & 0 & a-b & \cdots  & 0  \\
-      \vdots  & \vdots  & \vdots  & \ddots & \vdots   \\
-      0 & 0 & 0 & \cdots  & a-b  \\
-   \end{matrix} \right|
-   =[a+(n-1)b]{{(a-b)}^{n-1}}
+\cdots  \\ 
+{{r}_{n}}-{{r}_{1}} 
+\end{smallmatrix}}{\overset{\begin{smallmatrix} 
+{{r}_{2}}-{{r}_{1}} \\ 
+{{r}_{3}}-{{r}_{1}} 
+\end{smallmatrix}}{\mathop{===}}}\,\ \left| \begin{matrix}
+    a+(n-1)b & b & b & \cdots  & b  \\
+    0 & a-b & 0 & \cdots  & 0  \\
+    0 & 0 & a-b & \cdots  & 0  \\
+    \vdots  & \vdots  & \vdots  & \ddots & \vdots   \\
+    0 & 0 & 0 & \cdots  & a-b  \\
+\end{matrix} \right|
+=[a+(n-1)b]{{(a-b)}^{n-1}}
 $$
 \subsection{行列式的性质(II)}
 {\color{blue}例：}试计算范德蒙德 (Vandermonde)行列式
 $$
 D=\left| \begin{matrix}
-    1 & 1 & 1 & 1  \\
-    {{x}_{1}} & {{x}_{2}} & {{x}_{3}} & {{x}_{4}}  \\
-    x_{1}^{2} & x_{2}^{2} & x_{3}^{2} & x_{4}^{2}  \\
-    x_{1}^{3} & x_{2}^{3} & x_{3}^{3} & x_{4}^{3}  \\
- \end{matrix} \right|
- \underset{{{r}_{2}}-{{x}_{1}}{{r}_{1}}}{\overset{\begin{smallmatrix} 
-    {{r}_{4}}-{{x}_{1}}{{r}_{3}} \\ 
-    {{r}_{3}}-{{x}_{1}}{{r}_{2}} 
-   \end{smallmatrix}}{\mathop{====}}}
+1 & 1 & 1 & 1  \\
+{{x}_{1}} & {{x}_{2}} & {{x}_{3}} & {{x}_{4}}  \\
+x_{1}^{2} & x_{2}^{2} & x_{3}^{2} & x_{4}^{2}  \\
+x_{1}^{3} & x_{2}^{3} & x_{3}^{3} & x_{4}^{3}  \\
+\end{matrix} \right|
+\underset{{{r}_{2}}-{{x}_{1}}{{r}_{1}}}{\overset{\begin{smallmatrix} 
+{{r}_{4}}-{{x}_{1}}{{r}_{3}} \\ 
+{{r}_{3}}-{{x}_{1}}{{r}_{2}} 
+\end{smallmatrix}}{\mathop{====}}}
 \left| \begin{matrix}
-    1 & 1 & 1 & 1  \\
-    0 & {{x}_{2}}-{{x}_{1}} & {{x}_{3}}-{{x}_{1}} & {{x}_{4}}-{{x}_{1}}  \\
-    0 & x_{2}^{2}-{{x}_{1}}{{x}_{2}} & x_{3}^{2}-{{x}_{1}}{{x}_{3}} & x_{4}^{2}-{{x}_{1}}{{x}_{4}}  \\
-    0 & x_{2}^{3}-{{x}_{1}}x_{2}^{2} & x_{3}^{3}-{{x}_{1}}x_{3}^{2} & x_{4}^{3}-{{x}_{1}}x_{4}^{2}  \\
- \end{matrix} \right|
+1 & 1 & 1 & 1  \\
+0 & {{x}_{2}}-{{x}_{1}} & {{x}_{3}}-{{x}_{1}} & {{x}_{4}}-{{x}_{1}}  \\
+0 & x_{2}^{2}-{{x}_{1}}{{x}_{2}} & x_{3}^{2}-{{x}_{1}}{{x}_{3}} & x_{4}^{2}-{{x}_{1}}{{x}_{4}}  \\
+0 & x_{2}^{3}-{{x}_{1}}x_{2}^{2} & x_{3}^{3}-{{x}_{1}}x_{3}^{2} & x_{4}^{3}-{{x}_{1}}x_{4}^{2}  \\
+\end{matrix} \right|
 $$
 {\color{blue}技巧5：}逐行相减(相加)
 $$
 \underset{\mbox{展开}}{\overset{\mbox{按第一列}}{\mathop{====}}}\,
 \left| \begin{matrix}
-    {{x}_{2}}-{{x}_{1}} & {{x}_{3}}-{{x}_{1}} & {{x}_{4}}-{{x}_{1}}  \\
-    x_{2}^{2}-{{x}_{1}}{{x}_{2}} & x_{3}^{2}-{{x}_{1}}{{x}_{3}} & x_{4}^{2}-{{x}_{1}}{{x}_{4}}  \\
-    x_{2}^{3}-{{x}_{1}}x_{2}^{2} & x_{3}^{3}-{{x}_{1}}x_{3}^{2} & x_{4}^{3}-{{x}_{1}}x_{4}^{2}  \\
- \end{matrix} \right|
+{{x}_{2}}-{{x}_{1}} & {{x}_{3}}-{{x}_{1}} & {{x}_{4}}-{{x}_{1}}  \\
+x_{2}^{2}-{{x}_{1}}{{x}_{2}} & x_{3}^{2}-{{x}_{1}}{{x}_{3}} & x_{4}^{2}-{{x}_{1}}{{x}_{4}}  \\
+x_{2}^{3}-{{x}_{1}}x_{2}^{2} & x_{3}^{3}-{{x}_{1}}x_{3}^{2} & x_{4}^{3}-{{x}_{1}}x_{4}^{2}  \\
+\end{matrix} \right|
 \underset{\mbox{公因子}}{\overset{\mbox{提取每列}}{\mathop{====}}}\,
- ({{x}_{2}}-{{x}_{1}})({{x}_{3}}-{{x}_{1}})({{x}_{4}}-{{x}_{1}})\left| \begin{matrix}
-    1 & 1 & 1  \\
-    {{x}_{2}} & {{x}_{3}} & {{x}_{4}}  \\
-    x_{2}^{2} & x_{3}^{2} & x_{4}^{2}  \\
- \end{matrix} \right|
+({{x}_{2}}-{{x}_{1}})({{x}_{3}}-{{x}_{1}})({{x}_{4}}-{{x}_{1}})\left| \begin{matrix}
+1 & 1 & 1  \\
+{{x}_{2}} & {{x}_{3}} & {{x}_{4}}  \\
+x_{2}^{2} & x_{3}^{2} & x_{4}^{2}  \\
+\end{matrix} \right|
 $$
 $$
 =({{x}_{2}}-{{x}_{1}})({{x}_{3}}-{{x}_{1}})({{x}_{4}}-{{x}_{1}})({{x}_{3}}-{{x}_{2}})({{x}_{4}}-{{x}_{2}})\left| \begin{matrix}
-    1 & 1  \\
-    {{x}_{3}} & {{x}_{4}}  \\
- \end{matrix} \right| 
+1 & 1  \\
+{{x}_{3}} & {{x}_{4}}  \\
+\end{matrix} \right| 
 $$
 {\color{blue}技巧6：}数学归纳法(递推公式)
 $$
 D_{n}=\left| \begin{matrix}
-    1 & 1 & \cdots  & 1  \\
-    {{x}_{1}} & {{x}_{2}} & \cdots  & {{x}_{n}}  \\
-    x_{1}^{2} & x_{2}^{2} & \cdots  & x_{n}^{2}  \\
-    \vdots  & \vdots  & {} & \vdots   \\
-    x_{1}^{n-1} & x_{2}^{n-1} & \cdots  & x_{n}^{n-1}  \\
- \end{matrix} \right|
- =\prod\limits_{1\le j<i\le n}{({{x}_{i}}-{{x}_{j}})} 
+1 & 1 & \cdots  & 1  \\
+{{x}_{1}} & {{x}_{2}} & \cdots  & {{x}_{n}}  \\
+x_{1}^{2} & x_{2}^{2} & \cdots  & x_{n}^{2}  \\
+\vdots  & \vdots  & {} & \vdots   \\
+x_{1}^{n-1} & x_{2}^{n-1} & \cdots  & x_{n}^{n-1}  \\
+\end{matrix} \right|
+=\prod\limits_{1\le j<i\le n}{({{x}_{i}}-{{x}_{j}})} 
 $$
 $$
 =({{x}_{n}}-{{x}_{1}})({{x}_{n-1}}-{{x}_{1}})\cdots({{x}_{3}}-{{x}_{1}})({{x}_{2}}-{{x}_{1}})
@@ -348,48 +348,48 @@ $$
 {\color{blue}技巧7：}利用性质化为特殊行列式
 $$
 \left| \begin{matrix}
-    a & b & c  \\
-    {{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
-    b+c & c+a & a+b  \\
- \end{matrix} \right|
- \overset{{{r}_{3}}+{{r}_{1}}}{\mathop{===}}\,\left| \begin{matrix}
-    a & b & c  \\
-    {{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
-    a+b+c & a+b+c & a+b+c  \\
- \end{matrix} \right|
- \underset{\mbox{公因子}}{\overset{\mbox{提取}}{\mathop{===}}}\,(a+b+c)\left| \begin{matrix}
-    a & b & c  \\
-    {{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
-    1 & 1 & 1  \\
- \end{matrix} \right|
- $$$$
+a & b & c  \\
+{{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
+b+c & c+a & a+b  \\
+\end{matrix} \right|
+\overset{{{r}_{3}}+{{r}_{1}}}{\mathop{===}}\,\left| \begin{matrix}
+a & b & c  \\
+{{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
+a+b+c & a+b+c & a+b+c  \\
+\end{matrix} \right|
+\underset{\mbox{公因子}}{\overset{\mbox{提取}}{\mathop{===}}}\,(a+b+c)\left| \begin{matrix}
+a & b & c  \\
+{{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
+1 & 1 & 1  \\
+\end{matrix} \right|
+$$$$
 \underset{{{r}_{2}}\leftrightarrow{{r}_{1}}}{\overset{{{r}_{3}}\leftrightarrow {{r}_{2}}}{\mathop{===}}}\,(a+b+c)\left| \begin{matrix}
-    1 & 1 & 1  \\
-    a & b & c  \\
-    {{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
- \end{matrix} \right|
- =(a+b+c)(b-a)(c-a)(c-b)
+1 & 1 & 1  \\
+a & b & c  \\
+{{a}^{2}} & {{b}^{2}} & {{c}^{2}}  \\
+\end{matrix} \right|
+=(a+b+c)(b-a)(c-a)(c-b)
 $$
 {\color{blue}结论：}
 $$
 D={{\left| \begin{matrix}
-    {{a}_{11}} & \cdots  & {{a}_{1m}} & 0 & \cdots  & 0  \\
-    \vdots  & {m\times n} & \vdots  & \vdots  & {0} & \vdots   \\
-    {{a}_{m1}} & \cdots  & {{a}_{mm}} & 0 & \cdots  & 0  \\
-    {{c}_{11}} & \cdots  & {{c}_{1m}} & {{b}_{11}} & \cdots  & {{b}_{1n}}  \\
-    \vdots  & {*} & \vdots  & \vdots  & {n\times n} & \vdots   \\
-    {{c}_{n1}} & \cdots  & {{c}_{nm}} & {{b}_{n1}} & \cdots  & {{b}_{nn}}  \\
- \end{matrix} \right|}_{m+n}}
+{{a}_{11}} & \cdots  & {{a}_{1m}} & 0 & \cdots  & 0  \\
+\vdots  & {m\times n} & \vdots  & \vdots  & {0} & \vdots   \\
+{{a}_{m1}} & \cdots  & {{a}_{mm}} & 0 & \cdots  & 0  \\
+{{c}_{11}} & \cdots  & {{c}_{1m}} & {{b}_{11}} & \cdots  & {{b}_{1n}}  \\
+\vdots  & {*} & \vdots  & \vdots  & {n\times n} & \vdots   \\
+{{c}_{n1}} & \cdots  & {{c}_{nm}} & {{b}_{n1}} & \cdots  & {{b}_{nn}}  \\
+\end{matrix} \right|}_{m+n}}
 =\left|
 \begin{matrix}
-    a_{11} & \cdots  & a_{1m}  \\
-    \vdots  & \ddots & \vdots   \\
-    a_{m1} & \cdots  & a_{mm}
+a_{11} & \cdots  & a_{1m}  \\
+\vdots  & \ddots & \vdots   \\
+a_{m1} & \cdots  & a_{mm}
 \end{matrix}\right|_{m}
 \left|\begin{matrix}
-    b_{11} & \cdots  & b_{1n}  \\
-    \vdots  & \ddots & \vdots   \\
-    b_{n1} & \cdots  & b_{nn} \\
+b_{11} & \cdots  & b_{1n}  \\
+\vdots  & \ddots & \vdots   \\
+b_{n1} & \cdots  & b_{nn} \\
 \end{matrix} \right|_{n}
 $$
 \section{克莱姆法则（cramer）}
@@ -399,46 +399,57 @@ $$a_{1}x_{1}+a_{2}x_{2}+\cdots+a_{n}x_{n}=b$$
 $$
 \left\{ 
 \begin{aligned}
-    {{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={{b}_{1}},  \\
-    {{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={{b}_{2}},  \\
-    \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
-    {{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={{b}_{m}}  \\
+{{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={{b}_{1}},  \\
+{{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={{b}_{2}},  \\
+\cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
+{{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={{b}_{m}}  \\
 \end{aligned}
 \right.
 $$
 {\color{red}定义：}对于线性方程组
 \[\left\{ \begin{matrix}
-    {{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={{b}_{1}};  \\
-    {{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={{b}_{2}};  \\
-    \cdots \cdots  \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
-    {{a}_{n1}}{{x}_{1}}+{{a}_{n2}}{{x}_{2}}+\cdots +{{a}_{nn}}{{x}_{n}}={{b}_{n}},  \\
- \end{matrix} \right.\]
- 称行列式
- $$
- D=\left|\begin{matrix}
-    a_{11} & a_{12} & \cdots  & a_{1n}  \\
-    a_{21} & a_{22} & \cdots  & a_{2n}  \\
-    \vdots & \vdots & \ddots & \vdots   \\
-    a_{n1} & a_{n2} & \cdots  & a_{nn}  \\
+{{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={{b}_{1}};  \\
+{{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={{b}_{2}};  \\
+\cdots \cdots  \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
+{{a}_{n1}}{{x}_{1}}+{{a}_{n2}}{{x}_{2}}+\cdots +{{a}_{nn}}{{x}_{n}}={{b}_{n}},  \\
+\end{matrix} \right.\]
+称行列式
+$$
+D=\left|\begin{matrix}
+a_{11} & a_{12} & \cdots  & a_{1n}  \\
+a_{21} & a_{22} & \cdots  & a_{2n}  \\
+\vdots & \vdots & \ddots & \vdots   \\
+a_{n1} & a_{n2} & \cdots  & a_{nn}  \\
 \end{matrix} \right|
- $$
- 为方程组的系数行列式。\\
- {\color{blue}定理：}如果线性方程组的系数行列式不等于0, 即
- $$
- D=\left| \begin{matrix}
-    \begin{matrix}
-    {{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1n}}  \\
- \end{matrix}  \\
-    \begin{matrix}
-    {{a}_{21}} & {{a}_{22}} & \cdots  & {{a}_{2n}}  \\
- \end{matrix}  \\
-    \vdots \text{   }\vdots \text{      }\vdots   \\
-    \begin{matrix}
-    {{a}_{n1}} & {{a}_{n2}} & \cdots  & {{a}_{nn}}  \\
- \end{matrix}  \\
- \end{matrix} \right|\ne 0 
- $$
- 那么线性方程组有惟一解, 并且解可以表示为
+$$
+为方程组的系数行列式。\\
+根据
+$$
+Ax=b
+$$
+$$
+x=A^{-1}b=\frac{1}{\det{(A)}}C^{T}b
+$$
+$$\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\frac{1}{\operatorname{det}(A)}\left[\begin{array}{cccc}{C_{11}} & {C_{21}} & {\cdots} & {C_{n 1}} \\ {C_{12}} & {C_{22}} & {\cdots} & {C_{n 2}} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {C_{1 n}} & {C_{2 n}} & {\cdots} & {C_{n n}}\end{array}\right]\left[\begin{array}{c}{b_{1}} \\ {b_{2}} \\ {\vdots} \\ {b_{n}}\end{array}\right]=\frac{1}{\operatorname{det}(A)}\left[\begin{array}{c}{b_{1} C_{11}+b_{2} C_{21}+\cdots+b_{n} C_{n 1}} \\ {b_{1} C_{12}+b_{2} C_{22}+\cdots+b_{n} C_{n 2}} \\ {\vdots} \\ {b_{1} C_{1 n}+b_{2} C_{2 n}+\cdots+b_{n} C_{n n}}\end{array}\right] $$
+$$x_{1}=\frac{1}{\operatorname{det}(A)} \frac{b_{1} C_{11}+b_{2} C_{21}+\cdots+b_{n} C_{n 1}}{a_{11} c_{11}+a_{21} c_{21}+\cdots+a_{n 1} c_{n 1}}$$
+$$x_{1}=\frac{1}{\operatorname{det}(A)}\left|\begin{array}{cccc}{b_{1}} & {a_{21}} & {\cdots} & {a_{n 1}} \\ {b_{2}} & {a_{22}} & {\cdots} & {a_{n 2}} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {b_{n}} & {a_{2 n}} & {\cdots} & {a_{n n}}\end{array}\right|$$
+即可得出结果 \\
+{\color{blue}定理：}如果线性方程组的系数行列式不等于0, 即
+$$
+D=\left| \begin{matrix}
+\begin{matrix}
+{{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1n}}  \\
+\end{matrix}  \\
+\begin{matrix}
+{{a}_{21}} & {{a}_{22}} & \cdots  & {{a}_{2n}}  \\
+\end{matrix}  \\
+\vdots \text{   }\vdots \text{      }\vdots   \\
+\begin{matrix}
+{{a}_{n1}} & {{a}_{n2}} & \cdots  & {{a}_{nn}}  \\
+\end{matrix}  \\
+\end{matrix} \right|\ne 0 
+$$
+那么线性方程组有惟一解, 并且解可以表示为
 $$
 {{x}_{1}}=\frac{{{D}_{1}}}{D},
 {{x}_{2}}=\frac{{{D}_{2}}}{D},
@@ -448,20 +459,21 @@ $$
 其中
 $$
 {{D}_{j}}=\left| \begin{matrix}
-    {{a}_{11}} & \cdots  & {{a}_{1,j-1}} & {\color{yellow}{{b}_{1}}} & {{a}_{1,j+1}} & \cdots  & {{a}_{1n}}  \\
-    \vdots  & {\ddots} & \vdots          & {\color{yellow}\vdots}  & \vdots  & {\ddots} & \vdots   \\
-    {{a}_{n1}} & \cdots  & {{a}_{n,j-1}} & {\color{yellow}{{b}_{n}}} & {{a}_{n,j+1}} & \cdots  & {{a}_{nn}}  \\
- \end{matrix} \right| 
+{{a}_{11}} & \cdots  & {{a}_{1,j-1}} & {\color{yellow}{{b}_{1}}} & {{a}_{1,j+1}} & \cdots  & {{a}_{1n}}  \\
+\vdots  & {\ddots} & \vdots          & {\color{yellow}\vdots}  & \vdots  & {\ddots} & \vdots   \\
+{{a}_{n1}} & \cdots  & {{a}_{n,j-1}} & {\color{yellow}{{b}_{n}}} & {{a}_{n,j+1}} & \cdots  & {{a}_{nn}}  \\
+\end{matrix} \right| 
 $$
+\\
 {\color{red}注：}如果线性方程组的系数行列式$D=0$则方程组无解或有无穷多解。其中$b_{1},\cdots,b_{n}$为方程组的等号右边部分行成的向量\\
-称线性方程组
+称线性方程组 \\
 $$
 \left\{ \begin{matrix}
-    {{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={\color{red}0}  \\
-    {{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={\color{red}0}  \\
-    \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
-    {{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={\color{red}0}  \\
- \end{matrix} \right. 
+{{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={\color{red}0}  \\
+{{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={\color{red}0}  \\
+\cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
+{{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={\color{red}0}  \\
+\end{matrix} \right. 
 $$
 为{\color{red}齐次}线性方程组。显然$x_{1}=0,x_{2}=0,\cdots,x_{n}=0$是线性方程组的一个解，称为{\color{blue}零解}。\\
 {\color{red}注：}齐次线性方程组的解只有两种情况：惟一解或无穷多解。和非齐次线性方程组不同,它没有“无解”这
@@ -469,18 +481,13 @@ $$
 {\color{blue}推论：}如果齐次线性方程组
 $$
 \left\{ \begin{matrix}
-    {{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={\color{red}0}  \\
-    {{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={\color{red}0}  \\
-    \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
-    {{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={\color{red}0}  \\
- \end{matrix} \right. 
+{{a}_{11}}{{x}_{1}}+{{a}_{12}}{{x}_{2}}+\cdots +{{a}_{1n}}{{x}_{n}}={\color{red}0}  \\
+{{a}_{21}}{{x}_{1}}+{{a}_{22}}{{x}_{2}}+\cdots +{{a}_{2n}}{{x}_{n}}={\color{red}0}  \\
+\cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots   \\
+{{a}_{m1}}{{x}_{1}}+{{a}_{m2}}{{x}_{2}}+\cdots +{{a}_{mn}}{{x}_{n}}={\color{red}0}  \\
+\end{matrix} \right. 
 $$
-的系数行列式$D\ne 0$,  则方程组只有零解。
+的系数行列式$D\ne 0$,  则方程组只有零解。\\
 {\color{red}注：} 如果齐次线性方程组的系数行列式$D=0$, 则方程组必有非零解(即有无穷多解)。\\
-
-
-
-  
-
-
-
+克莱姆法则为方程组的解提供了一个代数表达式，让你能使用代数运算，而不只是写算法，但是如果真的用它来解方程将变成一个灾难，因为你必须对$n+1$个行列式求值。
+克莱姆法则研究了方程组的系数与方程组解的存在性与唯一性关系。与其在计算方面的作用相比，克莱姆法则更具有重大的理论价值。
