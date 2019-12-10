@@ -92,4 +92,122 @@ $$
          $$
         的矩阵为下三角矩阵。
     }
+    \item{
+        对角矩阵,称形如
+        $$
+        \left[ \begin{matrix}
+            \lambda_{1} & 0 & \cdots  & 0  \\
+            0 & \lambda_{2} & \cdots  & 0  \\
+            \vdots  & \vdots  & {} & \vdots   \\
+            0 & 0 & \cdots  & \lambda_{n}  \\
+        \end{matrix} \right]
+        $$
+        的矩阵为对角矩阵,可记作
+         $A=diag(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})$ \\
+        {\color{blue}性质\quad}如果矩阵$A=({a}_{ij})$是对角矩阵，则当$i\neq j$时，必有$a_{ij}=0$
+        {\color{red}注\quad}对角矩阵既是上三角矩阵, 也是下三角矩阵
+    }
+    \item{
+        数量矩阵,单位矩阵 \\
+        称形如
+        $$
+        \left[ \begin{matrix}
+            \lambda  & 0 & \cdots  & 0  \\
+            0 & \lambda  & \cdots  & 0  \\
+            \vdots  & \vdots  & {} & \vdots   \\
+            0 & 0 & \cdots  & \lambda   \\         
+        \end{matrix} \right]
+        $$
+        的矩阵为{\color{blue}数量矩阵\quad} \\
+        称
+        $$
+        \left[ \begin{matrix}
+            1 & 0 & \cdots  & 0  \\
+            0 & 1 & \cdots  & 0  \\
+            \vdots  & \vdots  & {} & \vdots   \\
+            0 & 0 & \cdots  & 1  \\
+        \end{matrix} \right]
+        $$
+        为$n$阶{\color{blue}单位矩阵\quad}记为$E_n$或$E$
+    }
 \end{enumerate}
+\subsection{矩阵的基本运算}
+{\color{red}定义：}设$A=(a_{ij},B=(b_{ij}))$是两个$m\times n$矩阵（即同型），则记举证A与B的和为$A+B$规定
+$$
+A+B=\left[ \begin{matrix}
+    {{a}_{11}}+{{b}_{11}} & {{a}_{12}}+{{b}_{12}} & \cdots  & {{a}_{1n}}+{{b}_{1n}}  \\
+   {{a}_{21}}+{{b}_{21}} & {{a}_{22}}+{{b}_{22}} & \cdots  & {{a}_{2n}}+{{b}_{2n}}  \\
+   \vdots  & \vdots  & {\ddots} & \vdots   \\
+   {{a}_{m1}}+{{b}_{m1}} & {{a}_{m2}}+{{b}_{m2}} & \cdots  & {{a}_{mn}}+{{b}_{mn}}  \\      
+\end{matrix} \right]
+$$
+即$A+B$的每个元素就是A与B的对应元素相加\\
+{\color{red}注:\quad}仅当A与B为同型矩阵时，$A+B$才有定义\\
+矩阵加法的运算规律
+\begin{enumerate}
+    \item{
+        $A+B=B+A$
+    }
+    \item{
+        $(A+B)+C=A+(B+C)$
+    }
+    \item {
+        $A+0=0+A=A$
+    }
+\end{enumerate}
+设矩阵$A=(a_{ij})_{m\times n}$\\
+称
+$$
+\left[ \begin{matrix}
+    -{{a}_{11}} & -{{a}_{12}} & \cdots  &-{{a}_{1n}}  \\
+   -{{a}_{21}} & -{{a}_{22}} & \cdots  &-{{a}_{2n}}  \\
+   \vdots  & \vdots  & \ddots & \vdots   \\
+   -{{a}_{m1}} & -{{a}_{m1}} & \cdots  &-{{a}_{mn}}  \\    
+\end{matrix} \right]
+$$
+为矩阵A的负矩阵,记为$-A$ \\
+定义矩阵的减法:$A-B=A+(-B)$\\
+{\color{red}注:\quad}仅当A与B为同型矩阵时，$A-B$才有定义\\
+\subsubsection{矩阵的数量乘法}
+设A时一个矩阵，k时一个数，则数量乘法$kA$也是一个矩阵，定义为
+$$kA=
+\left[ \begin{matrix}
+    \text{{\color{red}k}}{{a}_{11}} & \text{{\color{red}k}}{{a}_{12}} & \cdots  & \text{{\color{red}k}}{{a}_{1n}}  \\
+    \text{{\color{red}k}}{{a}_{21}} & \text{{\color{red}k}}{{a}_{22}} & \cdots  & \text{{\color{red}k}}{{a}_{2n}}  \\
+    \vdots  & \vdots  & {\ddots} & \vdots   \\
+    \text{{\color{red}k}}{{a}_{m1}} & \text{{\color{red}k}}{{a}_{m2}} & \cdots  & \text{{\color{red}k}}{{a}_{mn}}  \\   
+\end{matrix} \right]
+$$
+数乘矩阵的运算规律:\\
+\begin{enumerate}
+    \item{
+        $k(A+B)=kA+kB$
+    }
+    \item{
+        $(k+l)A=kA+kB$
+    }
+    \item{
+        $k(lA)=(kl)A$
+    }
+\end{enumerate}
+加法和数乘合称为矩阵的{\color{blue}线性运算}\\
+{\color{blue}性质}
+\begin{enumerate}
+    \item{
+        $1A=A,{\color{red}0}A=0,(-1)A=-A$
+    }
+    \item{
+        数量矩阵
+        $$
+        \left[ \begin{matrix}
+            \lambda  & 0 & \cdots  & 0  \\
+            0 & \lambda  & \cdots  & 0  \\
+            \vdots  & \vdots  & {} & \vdots   \\
+            0 & 0 & \cdots  & \lambda   \\         
+        \end{matrix} \right]=\lambda E
+        $$
+    }
+\end{enumerate}
+\subsubsection{矩阵的乘法}
+\subsubsection{矩阵的转置}
+\subsubsection{方阵的行列式}

@@ -7,15 +7,15 @@
 %文件源码格式需要更改为utf-8才能使用显示中文，并需要使用xelatex来编译本文档
 \usepackage{amsmath} %数学公式
 \usepackage{extarrows} %长等号
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 \title{\heiti 工程数学笔记\footnote{edit by \LaTeX}}
 \author{\kaishu 范李勇}
 \date{\today}
-
 %正文区
 \begin{document}
 \maketitle
+% 生成目录
 \tableofcontents
-\mainmatter
 \include{Determinants}
 \include{Matrices}
 \include{Wrong}
