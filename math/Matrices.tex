@@ -131,7 +131,7 @@ $$
         为$n$阶{\color{blue}单位矩阵\quad}记为$E_n$或$E$
     }
 \end{enumerate}
-\subsection{矩阵的基本运算}
+\section{矩阵的基本运算}
 {\color{red}定义：}设$A=(a_{ij},B=(b_{ij}))$是两个$m\times n$矩阵（即同型），则记举证A与B的和为$A+B$规定
 $$
 A+B=\left[ \begin{matrix}
@@ -168,7 +168,7 @@ $$
 为矩阵A的负矩阵,记为$-A$ \\
 定义矩阵的减法:$A-B=A+(-B)$\\
 {\color{red}注:\quad}仅当A与B为同型矩阵时，$A-B$才有定义\\
-\subsubsection{矩阵的数量乘法}
+\subsection{矩阵的数量乘法}
 设A时一个矩阵，k时一个数，则数量乘法$kA$也是一个矩阵，定义为
 $$kA=
 \left[ \begin{matrix}
@@ -208,6 +208,150 @@ $$
         $$
     }
 \end{enumerate}
-\subsubsection{矩阵的乘法}
-\subsubsection{矩阵的转置}
-\subsubsection{方阵的行列式}
+\subsection{矩阵的乘法}
+{\color{blue}定义：\quad}设
+$$
+A=\left[ \begin{matrix}
+    {{a}_{11}} & {{a}_{12}} & \cdots  & {{a}_{1s}}  \\
+    \vdots  & \vdots  & {\ddots} & \vdots   \\
+    {{a}_{i1}} & {{a}_{i2}} & \cdots  & {{a}_{is}}  \\
+    \vdots  & \vdots  & {\ddots} & \vdots   \\
+    {{a}_{m1}} & {{a}_{m2}} & \cdots  & {{a}_{ms}}       
+\end{matrix} \right]_{m\times s},
+B=\left[ \begin{matrix}
+    {{b}_{11}} & \cdots  & {{b}_{1j}} & \cdots  & {{b}_{1n}}  \\
+   {{b}_{21}} & \cdots  & {{b}_{2j}} & \cdots  & {{b}_{2n}}  \\
+   \vdots  & {\ddots} & \vdots  & {\ddots} & \vdots   \\
+   {{b}_{s1}} & \cdots  & {{b}_{sj}} & \cdots  & {{b}_{sn}}
+\end{matrix} \right]_{s\times n}
+$$
+则{\color{red}定义}
+$$
+AB=\left[ \begin{matrix}
+    {{c}_{11}} & \cdots  & {{c}_{1j}} & \cdots  & {{c}_{1n}}  \\
+   \vdots  & {} & \vdots  & {} & \vdots   \\
+   {{c}_{i1}} & \cdots  & {{c}_{ij}} & \cdots  & {{c}_{in}}  \\
+   \vdots  & {} & \vdots  & {} & \vdots   \\
+   {{c}_{m1}} & \cdots  & {{c}_{mj}} & \cdots  & {{c}_{mn}}      
+\end{matrix} \right]_{m\times n}
+$$
+其中${{c}_{ij}}={{a}_{i1}}{{b}_{1j}}+\cdots +{{a}_{is}}{{b}_{sj}}$ \\
+{\color{red}注\quad}两个矩阵相乘，前面矩阵的列数必须等于后面矩阵的行数(用前面的
+行乘后面的列) \\
+\subsection{矩阵乘法的运算规律}
+\begin{enumerate}
+    \item{
+        $(AB)C=A(BC)$结合律
+    }
+    \item{
+        $A(B+C)=AB+AC,(B+C)A=BA+CA$分配律
+    }
+    \item{
+        $(kA)(lB)=(kl)(AB)$(其中$k,l$为常数)
+    }
+    \item{
+        $A0=0, 0A=0$
+    }
+    \item{
+        $AE=EA=A,A(\lambda E)=(\lambda E)A=\lambda A$
+    }
+\end{enumerate}
+矩阵乘法{\color{red}不满足}的运算规律
+\begin{enumerate}
+    \item{
+        矩阵乘法不满足交换律\\
+        即：一般情况下$AB\ne BA$
+    }
+    \item{
+        存在零因子\\
+        即：存在矩阵$A\ne 0,B\ne 0$但$AB=0$\\
+        结论:$AB=0\nRightarrow A=0\text{或}B=0$
+    }
+    \item{
+        消去律不成立\\
+        即：$AB=AC,A\neq 0\nRightarrow B=C$\\
+        同理$BA=CA,A\neq 0\nRightarrow B=C$\\
+    }
+\end{enumerate}
+\subsection{矩阵的方幂}
+{\color{red}定义}设$A$为$n$阶方阵，则定义A的方幂为
+$$
+{{A}^{k}}=\underbrace{AA\cdots A}_{k\text{个}}={{A}^{k-1}}A,k\text{为整数}
+$$
+{\color{blue}规定\quad}$A^{0}=E$
+{\color{blue}性质\quad}对任意的非负整数$k,l$有
+$$
+{{A}^{k}}{{A}^{l}}={{A}^{k+l}},{({{A}^{k}})}^{l}={A}^{kl}
+$$
+{\color{red}注\quad}由于没有乘法交换律, 对非负整数$k$, 一般有
+$$
+{{(AB)}^{k}}\ne {{A}^{k}}{{B}^{k}}
+$$
+如$(AB)^2=(AB)(AB)=A({\color{red}BA})B\neq A({\color{red}AB})B=A^2B^2$
+\subsection{矩阵的转置}
+{\color{red}定义:}把矩阵$A$的{\color{blue}行列互换}得到的新矩阵,称为
+$A$的转置矩阵,记作$A^T$
+{\color{blue}结论:\quad}若$A$是$m\times n$矩阵，则$A^T$是$n\times m$矩阵\\
+{\color{blue}转置矩阵的运算性质}
+\begin{enumerate}
+   \item{
+       $(A^T)^T=A$
+   } 
+   \item{
+        ${{(A+B)}^{T}}={{A}^{T}}+{{B}^{T}}$
+   }
+   \item{
+        ${{(kA)}^{T}}=k{{A}^{T}}$
+   }
+   \item{
+        ${{(AB)}^{T}}={{B}^{T}}{{A}^{T}}$
+   }
+   \item{
+    由上条可推广到多个矩阵
+        ${{({{A}_{1}}{{A}_{2}}\cdots {{A}_{s}})}^{T}}=A_{s}^{T}\cdots A_{2}^{T}A_{1}^{T}$
+   }
+\end{enumerate}
+\subsection{对称矩阵与反对称矩阵}
+{\color{red}定义\quad}设$A$为$n$阶方阵,如果满足$A^T=A$,即
+$$
+{{a}_{ij}}={{a}_{ji}}\ \ (i,j=1,2,\cdots ,n)
+$$
+那么称$A$为{\color{blue}对称矩阵},对称阵的元素以主对角线为对称轴对应相等\\
+{\color{red}定义\quad}设$A$为$n$阶方阵,如果满足$A^T=-A$,即
+$$
+{{a}_{ij}}=-{{a}_{ji}}\ \ (i,j=1,2,\cdots ,n)
+$$
+那么称$A$为{\color{blue}反对称矩阵},反对称阵的元素关于主对角线互为相反数\\
+{\color{blue}推论\quad}反对称阵的对角元全为零\\
+{\color{blue}性质\quad}设$B$是一个$m\times n$矩阵,则$B^TB$和$BB^T$都是对称矩阵\\
+因为$(B^TB)^T=B^T(B^T)^T=B^TB$,同理$BB^T$是$m$阶对称矩阵\\
+{\color{blue}性质\quad}若$A,B$为同阶对称阵(反对称阵), 则$kA,A\pm B$仍为对称阵(反对称阵)\\
+{\color{blue}注\quad}即使$A,B$为同阶对称阵,乘积$AB$未必对称,但是如果$A,B$是可交换的同阶对称阵,则$AB$对称
+\subsection{方阵的行列式}
+{\color{red}定义\quad}由$n$阶方阵$A$的元素所构成的行列式,叫做方阵$A$的行列式，记作$|A|$或$\det{(A)}$ \\
+{\color{blue}性质\quad}
+\begin{enumerate}
+    \item{
+        $\left| {{A}^{T}} \right|\ =\left| A \right|$
+    }
+    \item{
+        $\left| kA \right|\ ={\color{red}{k}^{n}}\left| A \right|$
+    }
+    \item{
+        $\left| AB \right|\ =\ \left| A \right|\times \left| B \right|$
+        {\color{red}注\quad}这儿$A,B$为同阶方阵
+    }
+    \item{
+        $\left| {{A}_{1}}{{A}_{2}}\cdots {{A}_{s}} \right|\ =\ \left| {{A}_{1}} \right|\times \left| {{A}_{2}} \right|\times \cdots \times \left| {{A}_{s}} \right|$
+    }
+    \item{
+        $\left| {{A}^{m}} \right|\ =\ {{\left| A \right|}^{m}}$
+    }
+\end{enumerate}
+{\color{red}注\quad}设$A,B$均为{\color{red}$n$阶方阵}，一般情况下,$\left|A+B \right|{\color{red}\neq}\left|A\right|+\left|B\right|$
+\section{矩阵的初等变换与初等矩阵}
+\subsection{矩阵的初等变换}
+\subsection{矩阵的等价}
+\subsection{阶梯形矩阵与等价标准形}
+\subsection{初等矩阵}
+\subsection{初等矩阵与初等变换的关系}
